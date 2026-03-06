@@ -1,0 +1,67 @@
+ ./ds -h
+
+load-testing tool
+
+Usage: distress [OPTIONS]
+
+Options:
+  -v, --verbose...
+          Increase logging verbosity
+  -q, --quiet...
+          Decrease logging verbosity
+  -t, --targets-path <TARGETS_PATH>
+          path or url to get configuration from [default: itarmy_ua]
+  -c, --concurrency <CONCURRENCY>
+          number of tasks
+      --use-my-ip <USE_MY_IP>
+          hint to use your ip in % of requests from 0 to 100 inclusive works amazing with VPN [default: 0]
+      --use-tor <USE_TOR>
+          number of tor connections per target to use, max 100
+      --disable-auto-update
+          disables automatic updates
+      --log-per-target
+          Enables togging info for targets
+      --log-interval-sec <LOG_INTERVAL_SEC>
+          manages log frequency
+      --json-logs
+          print logs as json
+      --user-id <USER_ID>
+          send personalized user stats to receive rewards in future
+      --interface <INTERFACE>
+          advanced: comma separated socket interface names to use example: --interface eth0,lo0
+      --read-timeout <READ_TIMEOUT>
+          advanced: socket read timeout in milliseconds [default: 10000]
+      --tls-connect-timeout <TLS_CONNECT_TIMEOUT>
+          advanced: tls handshake timeout in milliseconds [default: 10000]
+      --connect-timeout <CONNECT_TIMEOUT>
+          advanced: socket connect timeout for targets and proxies in milliseconds [default: 10000]
+      --proxy-connect-timeout <PROXY_CONNECT_TIMEOUT>
+          advanced: socket proxy connect timeout for targets and proxies in milliseconds [default: 10000]
+      --tor-connect-timeout <TOR_CONNECT_TIMEOUT>
+          advanced: tor connect timeout in milliseconds [default: 10000]
+      --h2-handshake-timeout <H2_HANDSHAKE_TIMEOUT>
+          advanced: h2 handshake timeout in milliseconds [default: 10000]
+      --h2-ready-send-timeout <H2_READY_SEND_TIMEOUT>
+          advanced: h2 handshake timeout in milliseconds [default: 10000]
+      --buffer-read-size <BUFFER_READ_SIZE>
+          advanced: application stream buffer read size
+      --buffer-write-size <BUFFER_WRITE_SIZE>
+          advanced: application stream buffer write size
+      --requests-per-conn <REQUESTS_PER_CONN>
+          advanced: hint to send specific amount requests per single connection [default: 128]
+      --so-send-buf <SO_SEND_BUF>
+          advanced: socket SO_SNDBUF option, see linux man for more
+      --so-recv-buf <SO_RECV_BUF>
+          advanced: socket SO_RCVBUF option, see linux man for more
+      --disable-so-buf
+          advanced: disable so_send_buf, so_recv_buf
+      --disable-so-nolinger
+          advanced: disable so_linger(0)
+      --disable-tcp-nodelay
+          advanced: disable tcp_nodelay option
+      --worker-threads <WORKER_THREADS>
+          advanced: customize worker thread count for tokio scheduler
+  -h, --help
+          Print help information (use `--help` for more detail)
+  -V, --version
+          Print version information
